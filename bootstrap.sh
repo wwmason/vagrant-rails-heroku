@@ -71,4 +71,4 @@ sudo apt-get install -y postgresql-9.5 libpq-dev
 sudo -u postgres createuser vagrant -s
 
 # Set up Heroku Toolbelt
-wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
+sudo snap install heroku --classic
