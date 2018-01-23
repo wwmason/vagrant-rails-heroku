@@ -20,6 +20,7 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/xenial64"
   config.vm.synced_folder "/Users/bill/Documents/workspace/ror", "/home/vagrant/workspace"
+  config.vm.provision :shell, privileged: false, path: "bootstrap.sh"
   
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
@@ -37,20 +38,5 @@ Vagrant.configure("2") do |config|
   # leave the above two comments intact.  I may as well use the latter to
   # prevent public access.
   # !!!
-  
-  # Enable provisioning with a shell script. Additional provisioners such as
-  # Puppet, Chef, Ansible, Salt, and Docker are also available. Please see the
-  # documentation for more information about their specific syntax and use.
-  # config.vm.provision "shell", inline: <<-SHELL
-  #   apt-get update
-  #   apt-get install -y apache2
-  # SHELL
 
-  # !!!
-  # I anticipate needing to script setting up the box later, so I'll
-  # leave the above comment intact.
-  #
-  # I could also consider using `config.vm.provision :shell, path: "bootstrap.sh"`
-  # as I did in my `python-gui-dev` box setup
-  # !!!
 end
