@@ -1,8 +1,21 @@
 #!/usr/bin/env bash
 
-#export DEBIAN_FRONTEND=noninteractive
-#sudo dpkg-preconfigure -f noninteractive -p critical
-#sudo dpkg --configure -a
+# A VirtualBox-based Vagrant VM for Rails development; geared toward hosting the end-product on Heroku
+# Copyright (C) 2018 W. W. Mason
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
 
 # Install fundamental tools
 echo 'Installing fundamental tools'
@@ -11,19 +24,16 @@ sudo apt-get install -y git-core gcc make libssl-dev libreadline-dev zlib1g-dev
 
 # Install rbenv
 echo 'Installing rbenv'
-#cd 
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 source ~/.bashrc
-#exec $SHELL
 
 # Install ruby-build
 echo 'Installing ruby-build'
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
-#exec $SHELL
 
 # Install Ruby
 echo 'Installing ruby'
