@@ -69,3 +69,6 @@ sudo apt-get install -y postgresql-9.5 libpq-dev
 # ! NOTE ! Without a password for the database user
 # it's inadvisable to expose this VM to the outside world
 sudo -u postgres createuser vagrant -s
+
+# Set up Heroku Toolbelt
+wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
