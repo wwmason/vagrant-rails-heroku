@@ -2,3 +2,7 @@
 
 # Emacs detritus
 *~
+
+# Vagrant detritus
+*cloudimg-console.log
+.vagrant/
