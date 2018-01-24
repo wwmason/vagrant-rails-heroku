@@ -22,22 +22,5 @@ Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/xenial64"
   config.vm.synced_folder "/Users/bill/Documents/workspace/ror", "/home/vagrant/workspace"
   config.vm.provision :shell, privileged: false, path: "bootstrap.sh"
-  
-  # Create a forwarded port mapping which allows access to a specific port
-  # within the machine from a port on the host machine. In the example below,
-  # accessing "localhost:8080" will access port 80 on the guest machine.
-  # NOTE: This will enable public access to the opened port
-  # config.vm.network "forwarded_port", guest: 80, host: 8080
-
-  # Create a forwarded port mapping which allows access to a specific port
-  # within the machine from a port on the host machine and only allow access
-  # via 127.0.0.1 to disable public access
-  # config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
-
-  # !!!
-  # I anticipate needing to create a forwarded port mapping later, so I'll
-  # leave the above two comments intact.  I may as well use the latter to
-  # prevent public access.
-  # !!!
-
+  config.vm.network "forwarded_port", guest: 5000, host: 5000, host_ip: "127.0.0.1"
 end
