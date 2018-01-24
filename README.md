@@ -27,6 +27,12 @@ Simply `vagrant up` in the directory containing both `Vagrantfile` and `bootstra
 
 This has also been packaged into a base box, available at https://app.vagrantup.com/derstander/boxes/rails-heroku-dev
 
+After the virtual machine is running, you may use `heroku login`.  You
+can test this box with Heroku's `ruby-getting-started` sample
+application (https://github.com/heroku/ruby-getting-started).  The
+only change that should be made is in the Gemfile:
+`ruby '2.3.x'` -> `ruby '2.5.0'`.
+
 
 ## Packaging as a Base Box
 In the event of major changes to `ubuntu/xenial64`, this box can be
