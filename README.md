@@ -2,11 +2,13 @@
 
 A minimal(ish) VirtualBox-based Vagrant VM for developing/deploying Rails apps on Heroku.
 
-Copyright (C) 2018 W. W. Mason
+*Copyright (C) 2018 W. W. Mason*
+*(See License section below and LICENSE file)*
 
 
 ## Box Configuration
-This box is based on `ubuntu/xenial64`.  It adds the following packages/tools:
+This box is based on `ubuntu/xenial64` (https://app.vagrantup.com/ubuntu/boxes/xenial64).
+It adds the following packages/tools:
 - Git
 - rbenv
 - ruby-build
