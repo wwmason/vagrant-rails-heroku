@@ -23,15 +23,21 @@ It adds the following packages/tools:
 ## Getting Started
 *Vagrant must be installed (https://www.vagrantup.com)*
 
-Simply `vagrant up` in the directory containing both `Vagrantfile` and `bootstrap.sh`.
+`Vagrantfile` syncs a folder between the guest and host
+(`config.vm.synced_folder ...`).  The folder is specific to the
+user's directory structure.  It should be modified.
 
-This has also been packaged into a base box, available at https://app.vagrantup.com/derstander/boxes/rails-heroku-dev
+Then, simply `vagrant up` in the directory containing both 
+`Vagrantfile` and `bootstrap.sh`.
 
 After the virtual machine is running, you may use `heroku login`.  You
 can test this box with Heroku's `ruby-getting-started` sample
 application (https://github.com/heroku/ruby-getting-started).  The
 only change that should be made is in the Gemfile:
 `ruby '2.3.x'` -> `ruby '2.5.0'`.
+
+This has also been packaged into a base box, available at 
+https://app.vagrantup.com/derstander/boxes/rails-heroku-dev
 
 
 ## Packaging as a Base Box
